@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Hacer un programa que pinte un tablero de ajedrez de 8x8 casillas usando dos for anidados.
+   El programa pedirá solamente el ancho de la celda que será igual que el alto.-->
+    <script>
+      let ancho = parseInt(prompt("Dime el ancho"));
+      let pintar = false;
+      let alto = ancho;
+
+      document.write(
+        '<table border="1" style="background-color:black; width:"' +
+          ancho +
+          'px;">'
+      );
+      for (let i = 0; i < 8; i++) {
+        document.write('<tr style=" height:' + alto + 'px;">'); //tr es "table row" fila de una tabla
+        for (let j = 0; j < 8; j++) {
+          if (pintar == false) {
+          document.write(//td es "table data" cada una de las columnas de una fila
+            '<td style="background-color: black; width:' + ancho + 'px;"></td>'
+          );
+        } else if (pintar == true) {
+          document.write(
+            '<td style="background-color: white; width:' + ancho + 'px;"></td>'
+          );
+        }
+        //esto corta el bucle para que salga el color correcto
+        if (j == 7) {
+          break;
+        }
+        if (pintar == true) {
+          pintar = false;
+        } else if (pintar == false) {
+          pintar = true;; 
+        }
+
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

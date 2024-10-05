@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Hacer un programa que pida por teclado tres valores: 
+    el número de columnas de una tabla y, la altura y anchura (en pixels)
+     de sus celdas. Una vez tecleados estos valores, el programa pintará 
+     en la página web una tabla HTML de una fila por el nº de columnas 
+     tecleadas.-->
+    <script>
+      let valor1 = parseInt(prompt("Dime nº columnas"));
+      let valor2 = parseInt(prompt("Dime el alto"));
+      let valor3 = parseInt(prompt("Y ahora el ancho"));
+      document.write(
+        '<table border="1" style="background-color: black; width:"' +
+          valor3 +
+          'px;">'
+      );
+      document.write(
+        "<tr style = 'background-color: white; height: " + valor2 + "px; '"
+      );
+      for (let i = 0; i <= valor1; i++) {
+        document.write('<td style=" width:' + valor2 + 'px;"></td>');
+      }
+
+      document.write("</tr>");
+      document.write("</table>");
+    </script>
+  </body>
+</html>

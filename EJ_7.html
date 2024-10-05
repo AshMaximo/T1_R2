@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let columna = parseInt(prompt("Dime nº columnas"));
+      let filas = parseInt(prompt("Dime el numero de filas"));
+      let alto = parseInt(prompt("Dime el alto"));
+      let ancho = parseInt(prompt("Y ahora el ancho"));
+
+      document.write(
+        '<table border="1" style="background-color: white; width:"' +
+          ancho +
+          'px;">'
+      );
+      for (let i = 0; i < filas; i++) {
+        document.write('<tr style=" height:' + alto + 'px;">'); //tr es "table row" fila de una tabla
+        for (let i = 0; i < columna; i++) {
+          document.write('<td style=" width:' + ancho + 'px; height:' + alto + 'px;"></td>'); //td es "table data" cada una de las columnas de una fila
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

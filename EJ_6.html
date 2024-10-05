@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Hacer un programa en JavaScript que usando dos bucles anidados
+      for imprima por pantalla todas las tablas de multiplicar.-->
+    <script>
+      var multiplicar1 = 1;
+      var multiplicar2 = 1;
+
+      for (let multiplicar1 = 0; multiplicar1 <= 10; multiplicar1++) {
+        document.write("Tabla del " + multiplicar1);
+        for (let multiplicar2 = 0; multiplicar2 <= 10; multiplicar2++) {
+          var resultado = multiplicar1 * multiplicar2;
+          document.writeln("<dd>");
+          document.writeln(
+            multiplicar1 + " X " + multiplicar2 + " : " + resultado
+          );
+          document.writeln("<dd>");
+        }
+      }
+    </script>
+  </body>
+</html>

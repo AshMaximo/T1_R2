@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Escribe programa en JavaScript que consista en adivinar un número previamente
+      introducido por teclado (jugador 1).
+    El programa pedirá tantos números como intentos erróneos haga el jugador 2.
+    Solamente terminará cuando el jugador 2 acierte. El programa dará pistas al jugador 2 
+    indicándole si su número es mayor o menor que el número a adivinar.-->
+    <script>
+      var numero = prompt("Introduce un numero jugador 1");
+      numero = parseInt(numero);
+      while (numero != numero2) {
+        var numero2 = prompt("Dime un numero jugador 2");
+        numero2 = parseInt(numero2);
+        if (numero < numero2) {
+          alert("El numero es menor");
+        } else if (numero > numero2) {
+          alert("El numero es mayor");
+        } else if (numero == numero2) alert("CORRECTO");
+      }
+    </script>
+  </body>
+</html>

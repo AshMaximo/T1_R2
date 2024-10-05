@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor1 = parseInt(prompt("Dime nº columnas"));
+        let valor2 = parseInt(prompt("Dime el alto"));
+        let valor3 = parseInt(prompt("Y ahora el ancho"));
+        let pintar = false;
+        document.write(
+          '<table border="1" style="background-color: black; width:"' +
+            valor3 +
+            'px;">'
+        );
+        document.write(
+          "<tr style = 'background-color: white; height: " + valor2 + "px; '"
+        );
+        let i=0;
+        while ( i <= valor1)  {
+        if (pintar == false) {
+            document.write('<td style="background-color: white; width:' + valor2 + 'px;"></td>');
+        }else if (pintar == true) {
+            document.write('<td style="background-color: black; width:' + valor2 + 'px;"></td>');
+        }
+        if (pintar == true) {
+          pintar = false;
+        } else if (pintar == false) {
+          pintar = true;
+        }i++
+    }
+
+
+        document.write("</tr>");
+        document.write("</table>"); 
+    </script> 
+</body>
+</html>
